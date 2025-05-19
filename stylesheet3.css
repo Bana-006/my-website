@@ -1,0 +1,104 @@
+  <style>
+        body {
+            font-family: cursive;
+            background-color: #fff0f5;
+            color: #ff66b2;
+        }
+
+        #basketCopy {
+            border: 2px dashed #ff99cc;
+            background-color: #ffe6f2;
+            padding: 20px;
+            margin-top: 30px;
+            font-style: italic;
+body {
+            font-family: cursive;
+            background-color: #fff0f5;
+            color: #ff66b2;
+        }
+
+        #basketCopy {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffe6f2;
+            border: 2px dashed #ff99cc;
+            font-style: italic;
+        }
+
+        #doneButton {
+            display: none;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #ff99cc;
+            border: none;
+            font-size: 24px;
+            font-family: cursive;
+            font-style: italic;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #doneButton:hover {
+            background-color: #ff66b2;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: cursive;
+            color: #ff66b2;
+        }
+
+        select {
+            font-family: cursive;
+            font-size: 16px;
+        }
+        body {
+            font-family: cursive;
+            background-color: #fff0f5;
+            color: #ff66b2;
+        }
+
+        #basketCopy {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffe6f2;
+            border: 2px dashed #ff99cc;
+            font-style: italic;
+        }
+
+        #doneButton {
+            display: none;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #ff99cc;
+            border: none;
+            font-size: 24px;
+            font-family: cursive;
+            font-style: italic;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #doneButton:hover {
+            background-color: #ff66b2;
+        }
+
+        #finalMessage {
+            font-size: 20px;
+            color: #cc3399;
+            margin-top: 20px;
+            font-family: cursive;
+        }
+   
+        }
+body {
+ background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:Monospace; /* Readable font */
+    color: #333; /* Dark gray text color for readability */
+}
+    </style>
