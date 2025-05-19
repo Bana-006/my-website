@@ -1,0 +1,96 @@
+  .cupcake {
+            margin-bottom: 20px;
+        }  
+        #basket {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #ffe6f2;
+            border: 2px solid #ff99cc;
+            font-style: italic;
+            font-family: cursive;
+            color: #ff66b2;
+        }
+
+        #basket h3,
+        #basketItems li {
+            color: #ff66b2;
+            font-family: cursive;
+            font-style: italic;
+        }
+
+
+
+        #basket {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #ffe6f2; 
+            border: 2px solid #ff99cc;
+            font-style: italic;
+            font-family: cursive; 
+            color: #ff66b2; 
+        }
+
+        #basketItems li {
+            color: #ff66b2; 
+        }
+
+        #basket h3 {
+            color: #ff66b2;
+            font-style: italic;
+            font-family: cursive;
+        }
+
+
+body {
+ background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:Monospace; 
+    color: #333; 
+}
+
+h2 {
+    color: #e75480; /
+    background-color: #ffb6c1; 
+    font-size: 360px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+pre {
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+p {
+    font-size: 18px;
+    color: #e75480; 
+    margin: 10px 0;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 2px solid #e75480;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px; /* Ten for ups and downs and twenty for left and right */
+    background-color: #e75480; /* Pink background for the button */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    font-size: 16px; /* Slightly larger font for readability */
+}
+
+button:hover {
+    background-color: #ff69b4; /* Brighter pink on hover */
+}
