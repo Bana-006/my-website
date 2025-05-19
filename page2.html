@@ -17,12 +17,14 @@
             </select>
         </label>
         <label>what to add:
-            <select class="whatToAdd">
-                <option>Nothinnnnn ...</option>
-                <option>Sprinkles 🎀</option>
-                <option>Chocolate Chips 🎀</option>
-            </select>
-        </label>
+    <select class="whatToAdd" onchange="showToppingImage(this)">
+        <option>Nothinnnnn ...</option>
+        <option>Sprinkles 🎀</option>
+        <option>Chocolate Chips 🎀</option>
+    </select>
+</label>
+<div class="toppingImage"></div>
+
         <button onclick="addToBasket('Vanilla Cupcake', 0.75, this)">Buy</button>
     </div>
 
@@ -34,13 +36,15 @@
                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
             </select>
         </label>
-        <label>what to add:
-            <select class="whatToAdd">
-                <option>Nothinnnnn ...</option>
-                <option>Sprinkles 🎀</option>
-                <option>Chocolate Chips 🎀</option>
-            </select>
-        </label>
+   <label>what to add:
+    <select class="whatToAdd" onchange="showToppingImage(this)">
+        <option>Nothinnnnn ...</option>
+        <option>Sprinkles 🎀</option>
+        <option>Chocolate Chips 🎀</option>
+    </select>
+</label>
+<div class="toppingImage"></div>
+
         <button onclick="addToBasket('Chocolate Cupcake', 0.50, this)">Buy</button>
     </div>
 
@@ -52,13 +56,15 @@
                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
             </select>
         </label>
-        <label>what to add:
-            <select class="whatToAdd">
-                <option>Nothinnnnn ...</option>
-                <option>Sprinkles 🎀</option>
-                <option>Chocolate Chips 🎀</option>
-            </select>
-        </label>
+  <label>what to add:
+    <select class="whatToAdd" onchange="showToppingImage(this)">
+        <option>Nothinnnnn ...</option>
+        <option>Sprinkles 🎀</option>
+        <option>Chocolate Chips 🎀</option>
+    </select>
+</label>
+<div class="toppingImage"></div>
+
         <button onclick="addToBasket('Red Velvet Cupcake', 1.00, this)">Buy</button>
     </div>
 
@@ -94,6 +100,30 @@
             // Save 2 array & localStorage ofc
             basketItems.push(itemText);
             localStorage.setItem('cupcakeBasket', JSON.stringify(basketItems));
+
+function showToppingImage(selectElement) {
+    const toppingDiv = selectElement.parentElement.nextElementSibling; // the <div class="toppingImage">
+    const selected = selectElement.value;
+
+    toppingDiv.innerHTML = ""; // clear previous image
+
+    if (selected === "Sprinkles 🎀") {
+        const img = document.createElement("img");
+        img.src = "sprinkles.png";
+        img.alt = "Sprinkles";
+        img.width = 40;
+        img.height = 40;
+        toppingDiv.appendChild(img);
+    } else if (selected === "Chocolate Chips 🎀") {
+        const img = document.createElement("img");
+        img.src = "chocochips.png";
+        img.alt = "Chocolate Chips";
+        img.width = 40;
+        img.height = 40;
+        toppingDiv.appendChild(img);
+    }
+}
+
         }
     </script>
 </body>
