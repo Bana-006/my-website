@@ -97,6 +97,18 @@ button {
     cursor: pointer;
     font-size: 16px; /* Slightly larger font for readability */
 }
+.toppingImage {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 1px dashed pink; /* just for debugging */
+}
+.toppingImage img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
 
 button:hover {
     background-color: #ff69b4; /* Brighter pink on hover */
