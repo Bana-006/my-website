@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>the finall steps</title>
+    <link rel="stylesheet" href="stylesheet3.css">
+   
+</head>
+<body>
+
+    <h2>what uv bought from us :)</h2>
+
+    <div id="basketCopy">
+        <ul id="copiedItems"></ul>
+    </div>
+
+    <!-- 🏠 Delivery selection -->
+    <div style="margin-top: 30px;">
+        <label>where to deliver:
+            <select id="deliverySelect" onchange="showDoneButton()">
+                <option value="">-- choose place --</option>
+                <option value="tare2">tare2</option>
+                <option value="abo 3alia">abo 3alia</option>
+                <option value="tla3 el3ali">tla3 el3ali</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- 🎉 DONE BUTTON -->
+    <button id="doneButton" onclick="showLocationMessage()">All Done! 🎉🍰</button>
+
+    <!-- 💌 Final Message -->
+    <div id="finalMessage"></div>
+
+    <script>
+        // 🧁 Load saved basket
+        const savedBasket = localStorage.getItem('cupcakeBasket');
+        const itemList = document.getElementById('copiedItems');
+
+        if (savedBasket) {
+            const items = JSON.parse(savedBasket);
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                itemList.appendChild(li);
+            });
+        } else {
+            itemList.innerHTML = "<li> why didnt u buy any?!! 😢</li>";
+        }
+
+        // 🌟 Show the "All Done" button if something is selected
+        function showDoneButton() {
+            const select = document.getElementById('deliverySelect');
+            const button = document.getElementById('doneButton');
+            if (select.value !== "") {
+                button.style.display = 'inline-block';
+            } else {
+                button.style.display = 'none';
+            }
+        }
+
+        // 💌 Show a cute message depending on location
+        function showLocationMessage() {
+            const select = document.getElementById('deliverySelect');
+            const message = document.getElementById('finalMessage');
+            let text = "";
+
+            if (select.value === "tare2") {
+                text = "Yay! 🎈ur cupcakes r coming to tare2! Get ready 😋";
+            } else if (select.value === "abo 3alia") {
+                text = "yay! 🛵 Zooming ur cupcakes to abo 3alia. Stay sweet!";
+            } else if (select.value === "tla3 el3ali") {
+                text = "Cupcakes r hiking up to tla3 el3ali! 🧁⛰️ Hold on tight!";
+            } else {
+                text = "Hmm... u didnt choose where should we go? 🧐";
+            }
+
+            message.textContent = text;
+        }
+    </script>
+</body>
+</html>
