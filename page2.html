@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet2.css">
+
+</head>
+<body>
+    <h2>The Menu</h2>
+
+   
+    <div class="cupcake">
+        <p>Vanilla Cupcake 0.75 JD</p>
+        <img src="pic2.jpg" width="200" height="200" alt="Vanilla Cupcake">
+        <label>how many:
+            <select class="howMany">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </label>
+        <label>what to add:
+            <select class="whatToAdd">
+                <option>Nothinnnnn ...</option>
+                <option>Sprinkles 🎀</option>
+                <option>Chocolate Chips 🎀</option>
+            </select>
+        </label>
+        <button onclick="addToBasket('Vanilla Cupcake', 0.75, this)">Buy</button>
+    </div>
+
+    <div class="cupcake">
+        <p>Chocolate Cupcake 0.50 JD</p>
+        <img src="pic4.jpg" width="200" height="200" alt="Chocolate Cupcake">
+        <label>how many:
+            <select class="howMany">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </label>
+        <label>what to add:
+            <select class="whatToAdd">
+                <option>Nothinnnnn ...</option>
+                <option>Sprinkles 🎀</option>
+                <option>Chocolate Chips 🎀</option>
+            </select>
+        </label>
+        <button onclick="addToBasket('Chocolate Cupcake', 0.50, this)">Buy</button>
+    </div>
+
+    <div class="cupcake">
+        <p>Red Velvet Cupcake 1.00 JD</p>
+        <img src="pic3.jpg" width="200" height="200" alt="Red Velvet Cupcake">
+        <label>how many:
+            <select class="howMany">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            </select>
+        </label>
+        <label>what to add:
+            <select class="whatToAdd">
+                <option>Nothinnnnn ...</option>
+                <option>Sprinkles 🎀</option>
+                <option>Chocolate Chips 🎀</option>
+            </select>
+        </label>
+        <button onclick="addToBasket('Red Velvet Cupcake', 1.00, this)">Buy</button>
+    </div>
+
+    <div id="basket">
+        <h3>Shopping Basket</h3>
+        <ul id="basketItems"></ul>
+    </div>
+
+    <a href="page3.html">
+        <img src="click.jpg" alt="Click" width="150" height="150">
+    </a>
+
+    <script>
+        let basketItems = [];
+
+        function addToBasket(cupcakeName, price, button) {
+            const container = button.parentElement;
+            const howMany = parseInt(container.querySelector('.howMany').value);
+            const whatToAdd = container.querySelector('.whatToAdd').value;
+
+            const itemText = `${howMany} x ${cupcakeName} with ${whatToAdd} - ${(price * howMany).toFixed(2)} JD`;
+
+
+
+
+            // Adding 2 the basket list
+            const listItem = document.createElement('li');
+            listItem.textContent = itemText;
+            document.getElementById('basketItems').appendChild(listItem);
+
+
+
+            // Save 2 array & localStorage ofc
+            basketItems.push(itemText);
+            localStorage.setItem('cupcakeBasket', JSON.stringify(basketItems));
+        }
+    </script>
+</body>
+</html>
