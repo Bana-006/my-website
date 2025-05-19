@@ -18,6 +18,13 @@
             font-style: italic;
         }
 
+.toppingImage {
+    margin-top: 8px;
+    min-height: 45px; /* keeps space even if no image */
+}
+.toppingImage img {
+    border-radius: 50%;
+}
 
 
         #basket {
