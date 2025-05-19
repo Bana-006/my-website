@@ -101,7 +101,7 @@
             basketItems.push(itemText);
             localStorage.setItem('cupcakeBasket', JSON.stringify(basketItems));}
     
-function showToppingImage(selectElement) {
+        { function showToppingImage(selectElement) {
     const toppingDiv = selectElement.parentElement.nextElementSibling; // the <div class="toppingImage">
     const selected = selectElement.value;
 
@@ -122,7 +122,7 @@ function showToppingImage(selectElement) {
         img.height = 40;
         toppingDiv.appendChild(img);
     }
-
+        }
     </script>
 </body>
 </html>
