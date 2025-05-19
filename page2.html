@@ -78,51 +78,48 @@
     </a>
 
     <script>
-        let basketItems = [];
+<script>
+    let basketItems = [];
 
-        function addToBasket(cupcakeName, price, button) {
-            const container = button.parentElement;
-            const howMany = parseInt(container.querySelector('.howMany').value);
-            const whatToAdd = container.querySelector('.whatToAdd').value;
+    function addToBasket(cupcakeName, price, button) {
+        const container = button.parentElement;
+        const howMany = parseInt(container.querySelector('.howMany').value);
+        const whatToAdd = container.querySelector('.whatToAdd').value;
 
-            const itemText = `${howMany} x ${cupcakeName} with ${whatToAdd} - ${(price * howMany).toFixed(2)} JD`;
+        const itemText = `${howMany} x ${cupcakeName} with ${whatToAdd} - ${(price * howMany).toFixed(2)} JD`;
 
+        const listItem = document.createElement('li');
+        listItem.textContent = itemText;
+        document.getElementById('basketItems').appendChild(listItem);
 
-
-
-            // Adding 2 the basket list
-            const listItem = document.createElement('li');
-            listItem.textContent = itemText;
-            document.getElementById('basketItems').appendChild(listItem);
-
-
-
-            // Save 2 array & localStorage ofc
-            basketItems.push(itemText);
-            localStorage.setItem('cupcakeBasket', JSON.stringify(basketItems));}
-    
-        { function showToppingImage(selectElement) {
-    const toppingDiv = selectElement.parentElement.nextElementSibling; // the <div class="toppingImage">
-    const selected = selectElement.value;
-
-    toppingDiv.innerHTML = ""; // clear previous image
-
-    if (selected === "Sprinkles 🎀") {
-        const img = document.createElement("img");
-        img.src = "sprinkles.png";
-        img.alt = "Sprinkles";
-        img.width = 40;
-        img.height = 40;
-        toppingDiv.appendChild(img);
-    } else if (selected === "Chocolate Chips 🎀") {
-        const img = document.createElement("img");
-        img.src = "chocochips.png";
-        img.alt = "Chocolate Chips";
-        img.width = 40;
-        img.height = 40;
-        toppingDiv.appendChild(img);
+        basketItems.push(itemText);
+        localStorage.setItem('cupcakeBasket', JSON.stringify(basketItems));
     }
+
+    function showToppingImage(selectElement) {
+        const toppingDiv = selectElement.parentElement.nextElementSibling;
+        const selected = selectElement.value;
+
+        toppingDiv.innerHTML = "";
+
+        if (selected === "Sprinkles 🎀") {
+            const img = document.createElement("img");
+            img.src = "sprinkles.png";
+            img.alt = "Sprinkles";
+            img.width = 40;
+            img.height = 40;
+            toppingDiv.appendChild(img);
+        } else if (selected === "Chocolate Chips 🎀") {
+            const img = document.createElement("img");
+            img.src = "chocochips.png";
+            img.alt = "Chocolate Chips";
+            img.width = 40;
+            img.height = 40;
+            toppingDiv.appendChild(img);
         }
+    }
+</script>
+
     </script>
 </body>
 </html>
